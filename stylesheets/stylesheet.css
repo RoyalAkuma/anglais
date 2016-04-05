@@ -236,6 +236,7 @@ hr {
 banner {
 	border: none;
 	background: url('../images/Banniere.png');
+	width: 50%;
 
 }
 

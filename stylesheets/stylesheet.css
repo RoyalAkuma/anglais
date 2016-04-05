@@ -233,6 +233,13 @@ hr {
   background: url('../images/bg_hr.png') repeat-x center;
 }
 
+banner {
+	border: none;
+	background: url('../images/Banniere.png');
+
+}
+
+
 table {
   border: 1px solid #373737;
   margin-bottom: 20px;

@@ -59,11 +59,6 @@ body {
 }
 
 
-#banner{
-
-	background: url('../images/Banniere.png');
-
-}
 
 
 
@@ -372,6 +367,12 @@ Full-Width Styles
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
 }
+
+#banner{
+	background: url(../images/Banniere.png) no-repeat top left;
+}
+
+
 
 #main_content {
   padding-top: 40px;

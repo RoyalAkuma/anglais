@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Anglais : ">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+      <link href="animations.css" rel="stylesheet" type="text/css">
 
     <title>English MOOC</title>
   </head>
 
-  <body ng-controller="QuizzController">
-    <script type="text/javascript" src="javascript/angular.min.js"></script>
-    <script type="text/javascript" src="javascript/script.js"></script>
+  <body ng-app="ngAnimate">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
 
 
     <!-- HEADER -->
@@ -47,10 +48,8 @@ and how to apply modification to them.<br />
 A MOOC is a Massive Open Online Course made to teach people about a subject on the web.
 With media such as video, text or sound !
 </p>
-
 <br />
 <br />
-
 <h3>
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true">
   <span aria-hidden="true" class="octicon octicon-link"></span>
@@ -66,18 +65,14 @@ With media such as video, text or sound !
 </h3>
 
 <!-- 1st Part -->
-
     <!-- LES COURS text du cours 1 -->
-
     <h3>
     <a class="anchor" aria-hidden="true">
     <span aria-hidden="true" class="octicon octicon-link"></span>
     </a>
     <!-- Modifier le Titre -->
-
     First Course : What is a picture?
     </h3>
-
     <!-- LA VIDEO du cours 1-->
       <br />
       <br />
@@ -101,34 +96,23 @@ With media such as video, text or sound !
 
 
 
-    <div ng-controller="ExampleController">
-      <form name="form" class="css-form" novalidate>
-        Question 1 : Quel est le chocolat ?
-        <br />
 
-        <input type="radio" ng-model="user.gender" value="01" /> Noir
-        <input type="radio" ng-model="user.gender" value="02" /> Blanc
-        <input type="radio" ng-model="user.gender" value="03" /> Au Lait
-        <br />        <br />
-        Question 2 : Quel est le chocolat ?
-        <br />
-        <input type="radio" ng-model="user.gender" value="01" /> choix 1
-        <input type="radio" ng-model="user.gender" value="02" /> choix 2
-        <input type="radio" ng-model="user.gender" value="03" /> choix 3
-        <br />        <br />
-        Question 3 : Quel est le chocolat ?
-        <br />
-        <input type="radio" ng-model="user.gender" value="01" /> choix 1
-        <input type="radio" ng-model="user.gender" value="02" /> choix 2
-        <input type="radio" ng-model="user.gender" value="03" /> choix 3
-        <br />        <br />
-        <input type="button" ng-click="reset(form)" value="Reset" />
-        <input type="submit" ng-click="Resultat()" value="Resultat" />
-        <br />        <br />
-      </form>
-      <pre>user = {{user | json}}</pre>
-      <pre>master = {{master | json}}</pre>
+
+    Click me: <input type="checkbox" ng-model="checked" aria-label="Toggle ngShow"><br/>
+    <div>
+      Show:
+      <div class="check-element animate-hide" ng-show="checked">
+       I show up when your checkbox is checked.
+      </div>
     </div>
+    <div>
+      Hide:
+      <div class="check-element animate-hide" ng-hide="checked">
+        I hide when your checkbox is checked.
+      </div>
+    </div>
+
+
 
 
 

@@ -85,9 +85,77 @@ Each part is made of a multimedia content, a written text about the part and fin
       <br />
 
 
-      <p>Post haec Gallus Hierapolim profecturus ut expeditioni specie tenus adesset, Antiochensi plebi suppliciter obsecranti ut inediae dispelleret metum, quae per multas difficilisque causas adfore iam sperabatur, non ut mos est principibus, quorum diffusa potestas localibus subinde medetur aerumnis, disponi quicquam statuit vel ex provinciis alimenta transferri conterminis, sed consularem Syriae Theophilum prope adstantem ultima metuenti multitudini dedit id adsidue replicando quod invito rectore nullus egere poterit victu.</p>
-      <p>Novo denique perniciosoque exemplo idem Gallus ausus est inire flagitium grave, quod Romae cum ultimo dedecore temptasse aliquando dicitur Gallienus, et adhibitis paucis clam ferro succinctis vesperi per tabernas palabatur et conpita quaeritando Graeco sermone, cuius erat inpendio gnarus, quid de Caesare quisque sentiret. et haec confidenter agebat in urbe ubi pernoctantium luminum claritudo dierum solet imitari fulgorem. postremo agnitus saepe iamque, si prodisset, conspicuum se fore contemplans, non nisi luce palam egrediens ad agenda quae putabat seria cernebatur. et haec quidem medullitus multis gementibus agebantur.</p>
-      <p>Intellectum est enim mihi quidem in multis, et maxime in me ipso, sed paulo ante in omnibus, cum M. Marcellum senatui reique publicae concessisti, commemoratis praesertim offensionibus, te auctoritatem huius ordinis dignitatemque rei publicae tuis vel doloribus vel suspicionibus anteferre. Ille quidem fructum omnis ante actae vitae hodierno die maximum cepit, cum summo consensu senatus, tum iudicio tuo gravissimo et maximo. Ex quo profecto intellegis quanta in dato beneficio sit laus, cum in accepto sit tanta gloria.</p>
+       First Course : What is a picture?
+    </h3>
+    <!-- LA VIDEO du cours 1-->
+      <br />
+      <br />
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/VpYMv56mu6g?rel=0" frameborder="0" allowfullscreen></iframe>
+      <br />
+      <br />
+
+      <p>
+        <h5>An image is an array of pixels:</h5>
+      </p> 
+      
+      <p align="center"><img src="images/exempleImagePixel.png" height="98%"; width="98%";/></p>
+      
+      <p>
+        <h5>The luminous intensity:</h5>
+        <span class="tabulation">A pixel is described by its coordinates in the image and the value representing its luminous intensity. </span>
+        This luminous intensity represents two different parameters :
+        <ul>
+          <li>If it is a black and white picture, it corresponds to the grayscale (between 0 and 255 when the picture is coded on 8 bits).</li>
+          <li>If it is a color picture, it corresponds to the color of the pixel.</li>
+        </ul> 
+        To define the color of a pixel, there are 3 parameters, the quantity of the red, green and blue color. For example if we have this parameters : 0, 0, 255 it means that the pixel is blue.
+      </p>
+      <p>
+        <h5>The resolution:</h5>
+        <span class="tabulation">A picture has a certain resolution, it is a ratio of the number of pixels in the picture and the dimensions thereof. It is expressed in dpi (dots per inch for knowing an inch is about 2.54 cm).</span>
+      </p>
+        
+        <p align="center"><img src="images/explanationResolution.jpg" style="text-align:center;"/></p>
+
+      <p>
+        <h5>The format:</h5>
+        <span class="tabulation">A picture is stored in a text file. To manipulate this file it is important to know:</span>
+        <ul>
+          <li>The number of lines and columns of the array of pixels</li>
+          <li>The pixel format (bits, grayscales, color level)</li>
+          <li>The possible compression</li>
+        </ul>
+        It exists many formats, but there are two kinds of format: 
+        <ul>
+          <li>Simple</li>
+          <li>Compressed</li>
+        </ul>
+
+        Simple formats are text files with a header containing the image dimensions and the pixel format. 
+        <br/>
+        For example, PNM (portable anymap), PBM (portable bitmap), PGM (portable grayscale map), PPM (portable pixmap) are simple formats.
+        <br/>
+        In compressed formats, information is compressed to reduce the size of the picture files. For example, some web image like GIF (graphics interchange format) or JPEG (Joint Photographic Experts Group) are in a compressed format.
+        <br/>
+        Here, we have an example of a picture file in the PGM format (specified by “P2” on the file), 24x7 size, with maximum intensity values of 15:
+      </p>
+      <p>
+        <span class="code"> P2 </span> <br/>
+        <span class="code">24 7 </span> <br/>
+        <span class="code">15 </span><br/>
+        <span class="code">0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 </span><br/>
+        <span class="code">0  3  3  3  3  0  0  7  7  7  7  0  0 11 11 11 11  0  0 15 15 15 15  0 </span><br/>
+        <span class="code">0  3  0  0  0  0  0  7  0  0  0  0  0 11  0  0  0  0  0 15  0  0 15  0 </span><br/>
+        <span class="code">0  3  3  3  0  0  0  7  7  7  0  0  0 11 11 11  0  0  0 15 15 15 15  0 </span><br/>
+        <span class="code">0  3  0  0  0  0  0  7  0  0  0  0  0 11  0  0  0  0  0 15  0  0  0  0 </span><br/>
+        <span class="code">0  3  0  0  0  0  0  7  7  7  7  0  0 11 11 11 11  0  0 15  0  0  0  0 </span><br/>
+        <span class="code">0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 </span><br/>
+      </p>
+
+      And this is the result:
+
+      <p align="center"><img src="images/pgmPicture.png" style="text-align:center;"/></p>
+
 
 
     <!-- QCM -->
@@ -97,40 +165,59 @@ Each part is made of a multimedia content, a written text about the part and fin
       <a class="anchor" aria-hidden="true">
         <span aria-hidden="true" class="octicon octicon-link"></span>
       </a>
-    Let's have a little test! </h3>
+    Let's have a little test ! </h3>
 
-<!-- Model pour les question -->
-    <p>
-    1st Question : What is a pokemon?</p> <br />
-    <p>Choices: 1 , 2 , 3</p> <br />
-    Answer : <input type="checkbox" ng-model="checked1" aria-label="Toggle ngShow"><br/>
+<!-- Modele pour les question -->
+  <p> 1st Question: What is a picture?</p>
+    <p>Choices:
+      <ul>
+        <li>An array of curve lines</li>
+        <li>An array of words</li>
+        <li>An array of pixels</li>
+      </ul>
+    </p> 
+    Answer: <input type="checkbox" ng-model="checked1" aria-label="Toggle ngShow"><br/>
     <div>
       <div class="check-element animate-hide" ng-show="checked1">
-       The answer is: 1
+       The answer is: An array of pixels.
       </div>
     </div>
-
-<!-- Model pour les question -->
+    <br/>
+<!-- Modele pour les question -->
     <p>
-    1st Question : What is a pokemon ?</p> <br />
-    <p>Choices: 1 , 2 , 3</p> <br />
-    Answer : <input type="checkbox" ng-model="checked2" aria-label="Toggle ngShow"><br/>
+    2nd Question: What is a pixel?</p>
+    <p>Choices:
+    <ul>
+        <li>A kind of resolution</li>
+        <li>A value and coordinates</li>
+        <li>A picture format</li>
+      </ul>
+    </p>
+    Answer: <input type="checkbox" ng-model="checked2" aria-label="Toggle ngShow"><br/>
     <div>
       <div class="check-element animate-hide" ng-show="checked2">
-        The answer is: 1
+        The answer is: A value and coordinates
       </div>
-        </div>
+    </div>
+    <br/>
 
-        <!-- Model pour les question -->
-                <p>
-                1st Question : What is a pokemon ?</p> <br />
-                <p>Choices: 1 , 2 , 3</p> <br />
-                Answer : <input type="checkbox" ng-model="checked3" aria-label="Toggle ngShow"><br/>
-                <div>
-                  <div class="check-element animate-hide" ng-show="checked3">
-                   The answer is: 1
-                  </div>
-                </div>
+    <!-- Modele pour les question -->
+    <p>
+      3rd Question: How many kind of format exists?</p>
+      <p>Choices: 
+        <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+      </p>
+
+      Answer: <input type="checkbox" ng-model="checked3" aria-label="Toggle ngShow"><br/>
+        <div>
+        <div class="check-element animate-hide" ng-show="checked3">
+          The answer is: 2 (Simple and Compressed)
+        </div>
+      </div>
 
 
     <br />

@@ -430,19 +430,116 @@ Each part is made of a multimedia content, a written text about the part and fin
 
 
           Forth  Course : Objects modeling
+     
+    
           </h3>
 
-          <!-- LA VIDEO du cours 4-->
-          <br />
-          <br />
-          <iframe width="640" height="360" src="https://www.youtube.com/embed/VpYMv56mu6g?rel=0" frameborder="0" allowfullscreen></iframe>
-
+       
           <!-- Texte du Cours 4 -->
+          <table>
+<tr>
+<td> Let's learn how objects are represented: </td>
+</tr>
+<tr>
+<td> <iframe src="https://drive.google.com/file/d/0BxlxIWPgAfM7T1BqbHVBMU14alU/preview" width="600" height="600" align="middle"></iframe></td>
+</tr>
+</table> 
+
+   <!-- LA VIDEO du cours 4-->
+                   <table>
+<tr>
+<td> Let's practice: Exemple of modeling a cube and a sphere</td>
+</tr>
+<tr>
+<td> 			<iframe width="600" height="315" src="https://www.youtube.com/embed/KO0wbiq9FXQ" frameborder="0" align="middle" allowfullscreen></iframe></td>
+</tr>
+</table> 
 
 
-          <p>Post haec Gallus Hierapolim profecturus ut expeditioni specie tenus adesset, Antiochensi plebi suppliciter obsecranti ut inediae dispelleret metum, quae per multas difficilisque causas adfore iam sperabatur, non ut mos est principibus, quorum diffusa potestas localibus subinde medetur aerumnis, disponi quicquam statuit vel ex provinciis alimenta transferri conterminis, sed consularem Syriae Theophilum prope adstantem ultima metuenti multitudini dedit id adsidue replicando quod invito rectore nullus egere poterit victu.</p>
+
+ <br />
+          <br />
+
+       <!--   <p>set, Antiochensi plebi suppliciter obsecranti ut inediae dispelleret metum, quae per multas difficilisque causas adfore iam sperabatur, non ut mos est principibus, quorum diffusa potestas localibus subinde medetur aerumnis, disponi quicquam statuit vel ex provinciis alimenta transferri conterminis, sed consularem Syriae Theophilum prope adstantem ultima metuenti multitudini dedit id adsidue replicando quod invito rectore nullus egere poterit victu.</p>
           <p>Novo denique perniciosoque exemplo idem Gallus ausus est inire flagitium grave, quod Romae cum ultimo dedecore temptasse aliquando dicitur Gallienus, et adhibitis paucis clam ferro succinctis vesperi per tabernas palabatur et conpita quaeritando Graeco sermone, cuius erat inpendio gnarus, quid de Caesare quisque sentiret. et haec confidenter agebat in urbe ubi pernoctantium luminum claritudo dierum solet imitari fulgorem. postremo agnitus saepe iamque, si prodisset, conspicuum se fore contemplans, non nisi luce palam egrediens ad agenda quae putabat seria cernebatur. et haec quidem medullitus multis gementibus agebantur.</p>
-          <p>Intellectum est enim mihi quidem in multis, et maxime in me ipso, sed paulo ante in omnibus, cum M. Marcellum senatui reique publicae concessisti, commemoratis praesertim offensionibus, te auctoritatem huius ordinis dignitatemque rei publicae tuis vel doloribus vel suspicionibus anteferre. Ille quidem fructum omnis ante actae vitae hodierno die maximum cepit, cum summo consensu senatus, tum iudicio tuo gravissimo et maximo. Ex quo profecto intellegis quanta in dato beneficio sit laus, cum in accepto sit tanta gloria.</p>
+          <p>Intellectum est enim mihi quidem in multis, et maxime in me ipso, sed paulo ante in omnibus, cum M. Marcellum senatui reique publicae concessisti, commemoratis praesertim offensionibus, te auctoritatem huius ordinis dignitatemque rei publicae tuis vel doloribus vel suspicionibus anteferre. Ille quidem fructum omnis ante actae vitae hodierno die maximum cepit, cum summo consensu senatus, tum iudicio tuo gravissimo et maximo. Ex quo profecto intellegis quanta in dato beneficio sit laus, cum in accepto sit tanta gloria.</p> -->
+          
+          <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="stylesheet/stylesheet.css" type="text/css" media="screen">
+  <title>WebGL application for Modeling Objects</title>
+
+  <!-- Previous lab work -->
+  <script src="Previous/Vector.js" type="text/javascript"></script>
+  <script src="Previous/Matrix.js" type="text/javascript"></script>
+
+  <!-- Common scripts -->
+  <script src="Common/webgl-debug.js" type="text/javascript"></script>
+  <script src="Common/Camera.js" type="text/javascript"></script>
+  <script src="Common/Scene.js" type="text/javascript"></script>
+  <script src="Common/AttributeEnum.js" type="text/javascript"></script>
+  <script src="Common/Util.js" type="text/javascript"></script>
+  <script src="Common/PointData.js" type="text/javascript"></script>
+
+  <!-- Shaders come here -->
+  <script src="Shaders/Shader.js" type="text/javascript"></script>  
+  <script src="Shaders/LambertianShader.js" type="text/javascript"></script>
+  <script src="Shaders/NormalShader.js" type="text/javascript"></script>
+  <script src="Shaders/TangentShader.js" type="text/javascript"></script>
+  <script src="Shaders/BiTangentShader.js" type="text/javascript"></script>
+  <script src="Shaders/DefaultShader.js" type="text/javascript"></script>
+
+  <!-- Geometric Objects come here -->
+  <script src="Objects/GenericObject.js" type="text/javascript"></script>
+  <script src="Objects/Axis.js" type="text/javascript"></script>
+  <script src="Objects/Triangle.js" type="text/javascript"></script>
+  <script src="Objects/Gumbo.js" type="text/javascript"></script>
+  <script src="Objects/Teapot.js" type="text/javascript"></script>
+
+  <!-- Student work come here -->
+  <script src="Student/BezierCurve.js" type="text/javascript"></script>
+  <script src="Student/Cube.js" type="text/javascript"></script>
+  <script src="Student/BezierSurface.js" type="text/javascript"></script>
+  <script src="Student/Sphere.js" type="text/javascript"></script>
+
+  <!-- Main scripts -->
+  <script src="Exercises/ExerciseValidation.js"></script>
+  <script src="Exercises/ExerciseBezierCurve.js"></script>
+  <script src="Exercises/ExerciseCube.js"></script>
+  <script src="Exercises/ExerciseSphere.js"></script>
+  <script src="Exercises/ExerciseBezierSurface.js"></script>
+  <script src="webgl.js"></script>
+
+</head>
+
+</head>
+  <body onload="initGL()">  
+    <div id="menu">
+      <H2 id="h1-top"> Select an exercice then animate it ! </H2>
+      <input type="submit" id="animButton" value="Animate" class="button" onclick="startAnimation();" />
+      <input type="submit" id="exo0" value="Exercise 0" class="button-selected" onclick="changeExercise(0);" />
+      <input type="submit" id="exo1" value="Exercise 1" class="button" onclick="changeExercise(1);" />
+      <input type="submit" id="exo2" value="Exercise 2" class="button" onclick="changeExercise(2);" />
+      <input type="submit" id="exo3" value="Exercise 3" class="button" onclick="changeExercise(3);" />
+      <input type="submit" id="exo4" value="Exercise 4" class="button" onclick="changeExercise(4);" />
+      <H2 id="h1-bottom"> </H2>
+    </div>
+    <div id="main">
+      <h1 id="h1-gl">
+	WebGL application for Modeling Objects
+      </h1>
+      <canvas id="glCanvas" width=800 height=600>
+	<p>Canvas are unsupported : USE A DECENT browser !!!</p>
+      </canvas>
+    <div>
+</body>
+          
+          
+          
+          
+       <!--   <p>set, Antiochensi plebi suppliciter obsecranti ut inediae dispelleret metum, quae per multas difficilisque causas adfore iam sperabatur, non ut mos est principibus, quorum diffusa potestas localibus subinde medetur aerumnis, disponi quicquam statuit vel ex provinciis alimenta transferri conterminis, sed consularem Syriae Theophilum prope adstantem ultima metuenti multitudini dedit id adsidue replicando quod invito rectore nullus egere poterit victu.</p>
+          <p>Novo denique perniciosoque exemplo idem Gallus ausus est inire flagitium grave, quod Romae cum ultimo dedecore temptasse aliquando dicitur Gallienus, et adhibitis paucis clam ferro succinctis vesperi per tabernas palabatur et conpita quaeritando Graeco sermone, cuius erat inpendio gnarus, quid de Caesare quisque sentiret. et haec confidenter agebat in urbe ubi pernoctantium luminum claritudo dierum solet imitari fulgorem. postremo agnitus saepe iamque, si prodisset, conspicuum se fore contemplans, non nisi luce palam egrediens ad agenda quae putabat seria cernebatur. et haec quidem medullitus multis gementibus agebantur.</p>
+          <p>Intellectum est enim mihi quidem in multis, et maxime in me ipso, sed paulo ante in omnibus, cum M. Marcellum senatui reique publicae concessisti, commemoratis praesertim offensionibus, te auctoritatem huius ordinis dignitatemque rei publicae tuis vel doloribus vel suspicionibus anteferre. Ille quidem fructum omnis ante actae vitae hodierno die maximum cepit, cum summo consensu senatus, tum iudicio tuo gravissimo et maximo. Ex quo profecto intellegis quanta in dato beneficio sit laus, cum in accepto sit tanta gloria.</p> -->
 
 
           <!-- QCM -->
@@ -455,45 +552,69 @@ Each part is made of a multimedia content, a written text about the part and fin
           Let's have a little test ! </h3>
 
           <!-- Model pour les question -->
-              <p>
-              1st Question : What is a pokemon ?</p> <br />
-              <p>Choices : 1 , 2 , 3</p> <br />
-              Answer : <input type="checkbox" ng-model="checked10" aria-label="Toggle ngShow"><br/>
-              <div>
-                <div class="check-element animate-hide" ng-show="checked10">
-                 The answer is : 1
-                </div>
-              </div>
-          <br />
-              <!-- Model pour les question -->
-                  <p>
-                  1st Question : What is a pokemon ?</p> <br />
-                  <p>Choices : 1 , 2 , 3</p> <br />
-                  Answer : <input type="checkbox" ng-model="checked11" aria-label="Toggle ngShow"><br/>
-                  <div>
-                    <div class="check-element animate-hide" ng-show="checked11">
-                     The answer is : 1
-                    </div>
-                  </div>
-          <br />
-
-                  <!-- Model pour les question -->
+           
                       <p>
-                      1st Question : What is a pokemon ?</p> <br />
-                      <p>Choices : 1 , 2 , 3</p> <br />
+					      1st Question : How we can simply define a sphere in a spherical coordinate system ?</p> <br />
+								      <p>Choices:
+					  <ul>
+						<li>With a point and it's ray dimension </li>
+						<li>With the radial distance,  azimuth and polar angles </li>
+						<li>with a radius and 4 points</li>
+					  </ul>
+					</p> 
                       Answer : <input type="checkbox" ng-model="checked12" aria-label="Toggle ngShow"><br/>
                       <div>
                         <div class="check-element animate-hide" ng-show="checked12">
-                         The answer is : 1
+                         The right answer is : 2
                         </div>
                       </div>
           <br />
-
-
-
-
-                        <br />
           <br />
+          <br />
+
+        <!-- Model pour les question -->
+           
+                      <p>
+					      2nd Question : What's a Bezier curve ?</p> <br />
+								      <p>Choices:
+					  <ul>
+					  <li>Is sinusoidal</li>
+						<li>A parametric curve  </li>
+						<li>A smooth curve </li>
+					  </ul>
+					</p> 
+                      Answer : <input type="checkbox" ng-model="checked12" aria-label="Toggle ngShow"><br/>
+                      <div>
+                        <div class="check-element animate-hide" ng-show="checked12">
+                         The right answers are : 2, 3
+                        </div>
+                      </div>
+          <br />
+          <br />
+          <br />
+
+
+        <!-- Model pour les question -->
+           
+                      <p>
+					      3rd Question : how to define colors in WebGL </p> <br />
+								      <p>Choices:
+					  <ul>
+						<li> By fixing cyan, red and yellow colors </li>
+						<li> Using palette color</li>
+						<li> Using RGB in matricial format </li>
+					  </ul>
+					</p> 
+                      Answer : <input type="checkbox" ng-model="checked12" aria-label="Toggle ngShow"><br/>
+                      <div>
+                        <div class="check-element animate-hide" ng-show="checked12">
+                         The answer is : 3
+                        </div>
+                      </div>
+          <br />
+          <br />
+          <br />
+
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
